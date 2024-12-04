@@ -6,7 +6,7 @@ type item =
   | Mul of int * int
 
 let extract_items s =
-  let combined_pattern = Re.Perl.(compile (re "do\\(\\)|don't\\(\\)|mul\\((\\d+),(\\d+)\\)")) in
+    let combined_pattern = Re.Perl.(compile (re {|do\(\)|don't\(\)|mul\((\d+),(\d+)\)|})) in
   
   let matches = Re.all combined_pattern s in
   
