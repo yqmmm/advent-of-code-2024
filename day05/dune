@@ -1,0 +1,4 @@
+(executable
+ (name day05)
+ (libraries core)
+ (preprocess (pps ppx_jane)))
